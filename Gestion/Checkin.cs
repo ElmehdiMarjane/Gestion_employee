@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Gestion
 {
-    public partial class AddEmployee : MetroFramework.Forms.MetroForm
+    public partial class Checkin : MetroFramework.Forms.MetroForm
     {
-        public AddEmployee()
+        public Checkin()
         {
             InitializeComponent();
         }
 
-        private void AddEmployee_Load(object sender, EventArgs e)
+        private void Checkin_Load(object sender, EventArgs e)
         {
 
         }

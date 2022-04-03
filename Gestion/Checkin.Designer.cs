@@ -1,7 +1,7 @@
 ﻿
 namespace Gestion
 {
-    partial class Visualiser
+    partial class Checkin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@ namespace Gestion
         {
             this.SuspendLayout();
             // 
-            // Visualiser
+            // Checkin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Visualiser";
-            this.Text = "Visualiser";
-            this.Load += new System.EventHandler(this.Visualiser_Load);
+            this.Name = "Checkin";
+            this.Text = "Checkin";
+            this.Load += new System.EventHandler(this.Checkin_Load);
             this.ResumeLayout(false);
 
         }

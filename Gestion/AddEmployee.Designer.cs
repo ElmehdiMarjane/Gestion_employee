@@ -1,5 +1,5 @@
 ﻿
-namespace Gestion.Resources
+namespace Gestion
 {
     partial class AddEmployee
     {
@@ -52,6 +52,7 @@ namespace Gestion.Resources
             this.metroTile1.Location = new System.Drawing.Point(24, 173);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(332, 47);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTile1.TabIndex = 6;
             this.metroTile1.Text = "Ajouter";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
