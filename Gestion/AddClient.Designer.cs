@@ -1,5 +1,5 @@
 ﻿
-namespace Gestion.Resources
+namespace Gestion
 {
     partial class AddClient
     {
@@ -108,9 +108,11 @@ namespace Gestion.Resources
             this.metroTile1.Location = new System.Drawing.Point(23, 168);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(332, 47);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTile1.TabIndex = 2;
             this.metroTile1.Text = "Ajouter";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTile1.UseSelectable = true;
             // 
             // pictureBox1

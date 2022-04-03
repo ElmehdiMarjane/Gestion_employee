@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gestion.Resources
+namespace Gestion
 {
     public partial class Visualiser : MetroFramework.Forms.MetroForm
     {

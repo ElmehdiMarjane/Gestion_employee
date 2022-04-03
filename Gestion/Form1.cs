@@ -22,5 +22,33 @@ namespace Gestion
         {
 
         }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            AddEmployee a = new AddEmployee();
+            a.Show();
+            
+            
+
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            AddClient a = new AddClient();
+            a.Show();
+
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            Visualiser a = new Visualiser();
+            a.Show();
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            Checkin a = new Checkin();
+            a.Show();
+        }
     }
 }
