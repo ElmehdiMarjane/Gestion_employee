@@ -27,7 +27,8 @@ namespace Gestion
         {
             AddEmployee a = new AddEmployee();
             a.Show();
-
+            
+             
 
         }
 
