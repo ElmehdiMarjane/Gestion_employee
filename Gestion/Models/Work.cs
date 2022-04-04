@@ -57,7 +57,7 @@ namespace Gestion.Models
                     new XElement("Date",this.Date.ToShortDateString()),
                     new XElement("Heure_entre",this.Entree.ToShortTimeString()),
                     new XElement("Heure_sorti",this.Exit.ToShortTimeString()),
-                    new XElement("Heur_additionel",this.Overtime.ToString())
+                    new XElement("Heur_additionnelle", this.Overtime.ToString())
                 );
                 
 
