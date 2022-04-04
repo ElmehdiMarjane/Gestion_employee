@@ -18,7 +18,7 @@ namespace Gestion.Models
         public Client(String name)
         {
             this.Name = name;
-            string _file = @"C:\Users\elmeh\source\repos\Gestion\Gestion\Data\Clients.xml";
+            string _file = @".\Data\Clients.xml";
             XDocument doc;
 
             if (!File.Exists(_file))
@@ -31,14 +31,14 @@ namespace Gestion.Models
 
                 doc = XDocument.Load(_file);
             }
-            this.Id = doc.Descendants("Employee").Count() + 1;
+            this.Id = doc.Descendants("Client").Count() + 1;
 
 
         }
 
         public void SaveClient()
         {
-            string _file = @"C:\Users\elmeh\source\repos\Gestion\Gestion\Data\Clients.xml";
+            string _file = @".\Data\Clients.xml";
             XDocument doc;
 
             if (!File.Exists(_file))

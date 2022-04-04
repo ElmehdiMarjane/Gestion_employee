@@ -17,7 +17,7 @@ namespace Gestion.Models
 
         public Employe(String firstName, String  lastName)
         {
-            string _file = @"C:\Users\elmeh\source\repos\Gestion\Gestion\Data\Employes.xml";
+            string _file = @".\Data\Employes.xml";
             XDocument doc;
             if(!File.Exists(_file))
             {
@@ -37,7 +37,7 @@ namespace Gestion.Models
 
         public void SaveEmployee()
         {
-            string _file = @"C:\Users\elmeh\source\repos\Gestion\Gestion\Data\Employes.xml";
+            string _file = @".\Data\Employes.xml";
             XDocument doc;
 
             if (!File.Exists(_file))

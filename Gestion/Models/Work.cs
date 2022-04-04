@@ -35,7 +35,7 @@ namespace Gestion.Models
 
         public void saveWork()
         {
-            string _file = @"C:\Users\elmeh\source\repos\Gestion\Gestion\Data\Clients.xml";
+            string _file = @".\Data\Clients.xml";
             XDocument doc;
 
             if (!File.Exists(_file))
