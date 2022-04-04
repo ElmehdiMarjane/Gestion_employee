@@ -21,5 +21,11 @@ namespace Gestion
         {
 
         }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            Models.Client Employe = new Models.Client(metroTextBox1.Text);
+            Employe.SaveClient();
+        }
     }
 }
