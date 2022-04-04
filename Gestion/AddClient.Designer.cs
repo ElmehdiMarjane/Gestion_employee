@@ -114,6 +114,7 @@ namespace Gestion
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // pictureBox1
             // 

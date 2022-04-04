@@ -19,6 +19,15 @@ namespace Gestion
 
         private void AddEmployee_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            Models.Employe Employe = new Models.Employe(metroTextBox1.Text, metroTextBox2.Text);
+            MessageBox.Show(Employe.ToString());
+            Employe.SaveEmployee();
+            
 
         }
     }
