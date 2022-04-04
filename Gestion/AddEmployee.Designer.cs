@@ -57,6 +57,7 @@ namespace Gestion
             this.metroTile1.Text = "Ajouter";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroTextBox2
             // 
