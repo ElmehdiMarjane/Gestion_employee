@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace Gestion.Models
@@ -20,8 +21,9 @@ namespace Gestion.Models
         private int Overtime { get; set; }
 
 
-        public Work(String employe, String client,String technique,DateTime date,DateTime entree,DateTime exit,int overtime)
+        public Work(String employe ="", String client = "", String technique = "", DateTime date = default(DateTime), DateTime entree = default(DateTime), DateTime exit= default(DateTime), int overtime=0)
         {
+            try { 
             this.Employe = employe;
             this.Client = client;
             this.Technique = technique;
@@ -29,8 +31,13 @@ namespace Gestion.Models
             this.Entree = entree;
             this.Exit = exit;
             this.Overtime = overtime;
+            }
 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Veuillez remplir tous les champs ");
 
+            }
         }
 
         public void saveWork()
@@ -50,7 +57,7 @@ namespace Gestion.Models
             }
 
             doc.Root.Add(
-                new XElement("Work"),
+                new XElement("Work",
                     new XElement("Employe",this.Employe),
                     new XElement("Client",this.Client),
                     new XElement("Technique",this.Technique),
@@ -58,6 +65,7 @@ namespace Gestion.Models
                     new XElement("Heure_entre",this.Entree.ToShortTimeString()),
                     new XElement("Heure_sorti",this.Exit.ToShortTimeString()),
                     new XElement("Heur_additionnelle", this.Overtime.ToString())
+                    )
                 );
             doc.Save(_file);
 

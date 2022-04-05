@@ -73,8 +73,17 @@ namespace Gestion
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            Models.Work newWork = new Models.Work(metroComboBox1.SelectedItem.ToString(), metroComboBox2.SelectedItem.ToString(),metroTextBox1.Text,metroDateTime3.Value,metroDateTime1.Value,metroDateTime2.Value,int.Parse(metroTextBox2.Text));
-            newWork.saveWork();
+            try {
+
+                Models.Work newWork = new Models.Work(metroComboBox1.SelectedItem.ToString(), metroComboBox2.SelectedItem.ToString(), metroTextBox1.Text, metroDateTime3.Value, metroDateTime1.Value, metroDateTime2.Value, int.Parse(metroTextBox2.Text));
+                newWork.saveWork();
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Veuillez remplir tous les champs ");
+
+            }
+            
 
         }
     }
