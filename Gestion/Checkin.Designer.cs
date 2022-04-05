@@ -48,6 +48,7 @@ namespace Gestion
             this.metroComboBox1.ItemHeight = 23;
             this.metroComboBox1.Location = new System.Drawing.Point(23, 78);
             this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.PromptText = "Employee";
             this.metroComboBox1.Size = new System.Drawing.Size(354, 29);
             this.metroComboBox1.TabIndex = 0;
             this.metroComboBox1.UseSelectable = true;
@@ -58,6 +59,7 @@ namespace Gestion
             this.metroComboBox2.ItemHeight = 23;
             this.metroComboBox2.Location = new System.Drawing.Point(23, 128);
             this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.PromptText = "Client";
             this.metroComboBox2.Size = new System.Drawing.Size(354, 29);
             this.metroComboBox2.TabIndex = 1;
             this.metroComboBox2.UseSelectable = true;
@@ -157,6 +159,7 @@ namespace Gestion
             this.metroTile1.Text = "Check";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroDateTime1
             // 
@@ -165,6 +168,7 @@ namespace Gestion
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroDateTime1.TabIndex = 3;
             // 
             // metroLabel1

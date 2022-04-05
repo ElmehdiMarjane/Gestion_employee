@@ -135,10 +135,5 @@
     <None Include="Resources\Emp.png" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Content Include="Data\Clients.xml" />
-    <Content Include="Data\Employes.xml" />
-    <Content Include="Data\Works.xml" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

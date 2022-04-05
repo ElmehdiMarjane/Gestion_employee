@@ -11,8 +11,8 @@ namespace Gestion.Models
     class Work
     {
 
-        private Employe Employe { get; set; }
-        private Client Client { get; set; }
+        private String Employe { get; set; }
+        private String Client { get; set; }
         private string Technique { get; set; }
         private DateTime Date { get; set; }
         private DateTime Entree { get; set; }
@@ -20,7 +20,7 @@ namespace Gestion.Models
         private int Overtime { get; set; }
 
 
-        public Work(Employe employe,Client client,String technique,DateTime date,DateTime entree,DateTime exit,int overtime)
+        public Work(String employe, String client,String technique,DateTime date,DateTime entree,DateTime exit,int overtime)
         {
             this.Employe = employe;
             this.Client = client;
@@ -35,7 +35,7 @@ namespace Gestion.Models
 
         public void saveWork()
         {
-            string _file = @".\Data\Clients.xml";
+            string _file = @".\Data\Works.xml";
             XDocument doc;
 
             if (!File.Exists(_file))
@@ -51,15 +51,15 @@ namespace Gestion.Models
 
             doc.Root.Add(
                 new XElement("Work"),
-                    new XElement("Employe",this.Employe.ToString()),
-                    new XElement("Client",this.Client.ToString()),
+                    new XElement("Employe",this.Employe),
+                    new XElement("Client",this.Client),
                     new XElement("Technique",this.Technique),
                     new XElement("Date",this.Date.ToShortDateString()),
                     new XElement("Heure_entre",this.Entree.ToShortTimeString()),
                     new XElement("Heure_sorti",this.Exit.ToShortTimeString()),
                     new XElement("Heur_additionnelle", this.Overtime.ToString())
                 );
-                
+            doc.Save(_file);
 
         }
 

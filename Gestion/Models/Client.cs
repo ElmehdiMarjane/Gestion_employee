@@ -54,7 +54,7 @@ namespace Gestion.Models
 
             doc.Root.Add(
                   new XElement("Client",
-                               new XElement("Id", this.Id),
+                               new XElement("num", this.Id),
                                new XElement("Name", this.Name)
                         )
                   );
