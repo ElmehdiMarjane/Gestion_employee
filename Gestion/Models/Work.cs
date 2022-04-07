@@ -15,18 +15,20 @@ namespace Gestion.Models
         private String Employe { get; set; }
         private String Client { get; set; }
         private string Technique { get; set; }
+        private string Vehicule { get; set; }
         private DateTime Date { get; set; }
         private DateTime Entree { get; set; }
         private DateTime Exit { get; set; }
         private int Overtime { get; set; }
 
 
-        public Work(String employe ="", String client = "", String technique = "", DateTime date = default(DateTime), DateTime entree = default(DateTime), DateTime exit= default(DateTime), int overtime=0)
+        public Work(String employe ="", String client = "", String technique = "",String vhicule = "", DateTime date = default(DateTime), DateTime entree = default(DateTime), DateTime exit= default(DateTime), int overtime=0)
         {
             try { 
             this.Employe = employe;
             this.Client = client;
             this.Technique = technique;
+            this.Vehicule = technique;
             this.Date = date;
             this.Entree = entree;
             this.Exit = exit;
@@ -58,13 +60,14 @@ namespace Gestion.Models
 
             doc.Root.Add(
                 new XElement("Work",
+                    new XElement("Client", this.Client),
                     new XElement("Employe",this.Employe),
-                    new XElement("Client",this.Client),
-                    new XElement("Technique",this.Technique),
+                    new XElement("Operation",this.Technique),
+                    new XElement("Vehicule", this.Vehicule),
                     new XElement("Date",this.Date.ToShortDateString()),
                     new XElement("Heure_entre",this.Entree.ToShortTimeString()),
                     new XElement("Heure_sorti",this.Exit.ToShortTimeString()),
-                    new XElement("Heur_additionnelle", this.Overtime.ToString())
+                    new XElement("Heures_supplémentaires", this.Overtime.ToString())
                     )
                 );
             doc.Save(_file);

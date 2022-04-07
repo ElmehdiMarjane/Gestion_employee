@@ -16,6 +16,8 @@ namespace Gestion
 
         string _Clients = @".\Data\Clients.xml";
         string _Employees = @".\Data\Employes.xml";
+        string _Operation = @".\Data\Operation.xml";
+        string _Vehicle = @".\Data\Vehicle.xml";
         public Checkin()
         {
             InitializeComponent();
@@ -68,6 +70,42 @@ namespace Gestion
                 metroComboBox2.Items.Add(te.Name);
             }
 
+            //Populating Combobox Operation
+            XElement Operations = XElement.Load(_Operation);
+            var OperationList = (
+                from Operation in Operations.Elements("Operation")
+                select new
+                {
+
+                    Name = Operation.Element("Name").Value
+
+                }).ToList();
+
+
+            foreach (var te in OperationList)
+            {
+
+                metroComboBox3.Items.Add(te.Name);
+            }
+
+            //Populating Combobox Vehicule
+            XElement Vehicles = XElement.Load(_Vehicle);
+            var VehicleList = (
+                from Vehicle in Vehicles.Elements("Vehicle")
+                select new
+                {
+
+                    Name = Vehicle.Element("Name").Value
+
+                }).ToList();
+
+
+            foreach (var te in VehicleList)
+            {
+
+                metroComboBox4.Items.Add(te.Name);
+            }
+
 
         }
 
@@ -75,7 +113,7 @@ namespace Gestion
         {
             try {
 
-                Models.Work newWork = new Models.Work(metroComboBox1.SelectedItem.ToString(), metroComboBox2.SelectedItem.ToString(), metroComboBox3.Text, metroDateTime3.Value, metroDateTime1.Value, metroDateTime2.Value, int.Parse(metroTextBox2.Text));
+                Models.Work newWork = new Models.Work(metroComboBox1.SelectedItem.ToString(), metroComboBox2.SelectedItem.ToString(), metroComboBox3.Text,metroComboBox4.Text, metroDateTime3.Value, metroDateTime1.Value, metroDateTime2.Value, int.Parse(metroTextBox2.Text));
                 newWork.saveWork();
                 MessageBox.Show("Ajouté avec succès");
                 this.Close();
