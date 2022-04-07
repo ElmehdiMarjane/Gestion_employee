@@ -11,7 +11,7 @@ namespace Gestion.Models
 {
     class Work
     {
-
+        private int Num;
         private String Employe { get; set; }
         private String Client { get; set; }
         private string Technique { get; set; }
@@ -28,7 +28,7 @@ namespace Gestion.Models
             this.Employe = employe;
             this.Client = client;
             this.Technique = technique;
-            this.Vehicule = technique;
+            this.Vehicule = vhicule;
             this.Date = date;
             this.Entree = entree;
             this.Exit = exit;
@@ -40,6 +40,20 @@ namespace Gestion.Models
                 MessageBox.Show("Veuillez remplir tous les champs ");
 
             }
+            string _file = @".\Data\Works.xml";
+            XDocument doc;
+
+            if (!File.Exists(_file))
+            {
+                doc = new XDocument();
+                doc.Add(new XElement("Works"));
+
+            }
+            else
+            {
+                doc = XDocument.Load(_file);
+            }
+            this.Num = doc.Descendants("Work").Count() + 1;
         }
 
         public void saveWork()
@@ -60,6 +74,7 @@ namespace Gestion.Models
 
             doc.Root.Add(
                 new XElement("Work",
+                    new XElement("Num", this.Num),
                     new XElement("Client", this.Client),
                     new XElement("Employe",this.Employe),
                     new XElement("Operation",this.Technique),
