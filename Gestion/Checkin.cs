@@ -75,8 +75,10 @@ namespace Gestion
         {
             try {
 
-                Models.Work newWork = new Models.Work(metroComboBox1.SelectedItem.ToString(), metroComboBox2.SelectedItem.ToString(), metroTextBox1.Text, metroDateTime3.Value, metroDateTime1.Value, metroDateTime2.Value, int.Parse(metroTextBox2.Text));
+                Models.Work newWork = new Models.Work(metroComboBox1.SelectedItem.ToString(), metroComboBox2.SelectedItem.ToString(), metroComboBox3.Text, metroDateTime3.Value, metroDateTime1.Value, metroDateTime2.Value, int.Parse(metroTextBox2.Text));
                 newWork.saveWork();
+                MessageBox.Show("Ajouté avec succès");
+                this.Close();
             } 
             catch (Exception ex)
             {

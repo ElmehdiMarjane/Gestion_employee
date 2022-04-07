@@ -26,6 +26,9 @@ namespace Gestion
         {
             Models.Client Employe = new Models.Client(metroTextBox1.Text);
             Employe.SaveClient();
+
+            MessageBox.Show("Ajouté avec succès");
+            this.Close();
         }
     }
 }

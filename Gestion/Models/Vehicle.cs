@@ -44,7 +44,7 @@ namespace Gestion.Models
             if (!File.Exists(_file))
             {
                 doc = new XDocument();
-                doc.Add(new XElement("Vehicle"));
+                doc.Add(new XElement("Vehicles"));
             }
             else
             {

@@ -74,7 +74,7 @@ namespace Gestion
             this.metroTile1.Location = new System.Drawing.Point(23, 168);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(332, 47);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Red;
             this.metroTile1.TabIndex = 2;
             this.metroTile1.Text = "Ajouter";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,6 +101,7 @@ namespace Gestion
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTextBox1);
             this.Name = "AddClient";
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Load += new System.EventHandler(this.AddClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

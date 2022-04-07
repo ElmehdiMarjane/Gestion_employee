@@ -86,6 +86,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOperation.Designer.cs">
+      <DependentUpon>AddOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVehicle.Designer.cs">
+      <DependentUpon>AddVehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Checkin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,12 @@
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddOperation.resx">
+      <DependentUpon>AddOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddVehicle.resx">
+      <DependentUpon>AddVehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Checkin.resx">
       <DependentUpon>Checkin.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +189,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hand_document_list_paper_file_icon_219510 %281%29.ico" />
+    <None Include="Resources\kisspng-car-computer-icons-sedan-auto-detailing-auto-vector-5adb8f31845cb4.3836226215243384815422-removebg-preview.png" />
+    <None Include="Resources\operations-management-computer-icons-business-administration-vector-graphics-png-favpng-XffEHGee3TEMQBTVVPdpkfBan-removebg-preview.png" />
     <None Include="Resources\image1.png" />
     <None Include="Resources\image1-removebg-preview.jpg" />
   </ItemGroup>

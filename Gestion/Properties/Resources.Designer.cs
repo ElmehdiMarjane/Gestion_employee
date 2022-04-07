@@ -99,5 +99,27 @@ namespace Gestion.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_car_computer_icons_sedan_auto_detailing_auto_vector_5adb8f31845cb4_3836226215243384815422_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-car-computer-icons-sedan-auto-detailing-auto-vector-5adb8f31845cb4.383622" +
+                        "6215243384815422-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap operations_management_computer_icons_business_administration_vector_graphics_png_favpng_XffEHGee3TEMQBTVVPdpkfBan_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("operations-management-computer-icons-business-administration-vector-graphics-png-" +
+                        "favpng-XffEHGee3TEMQBTVVPdpkfBan-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
