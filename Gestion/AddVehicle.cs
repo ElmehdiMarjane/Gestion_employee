@@ -10,23 +10,24 @@ using System.Windows.Forms;
 
 namespace Gestion
 {
-    public partial class AddEmployee : MetroFramework.Forms.MetroForm
+    public partial class AddVehicle : MetroFramework.Forms.MetroForm
     {
-        public AddEmployee()
+        public AddVehicle()
         {
             InitializeComponent();
+            
         }
 
-        private void AddEmployee_Load(object sender, EventArgs e)
+        private void AddVehicle_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            Models.Employe Employe = new Models.Employe(metroTextBox1.Text, metroTextBox2.Text);
-            
-            Employe.SaveEmployee();
+            Models.Vehicle Employe = new Models.Vehicle(metroTextBox1.Text);
+
+            Employe.SaveVehicle();
             MessageBox.Show("Ajouté avec succès");
             this.Close();
         }

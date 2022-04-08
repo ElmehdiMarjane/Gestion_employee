@@ -15,12 +15,13 @@ namespace Gestion
     {
         public Form1()
         {
+            
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
@@ -48,6 +49,18 @@ namespace Gestion
         private void metroTile4_Click(object sender, EventArgs e)
         {
             Checkin a = new Checkin();
+            a.Show();
+        }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            AddOperation a = new AddOperation();
+            a.Show();
+        }
+
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+            AddVehicle a = new AddVehicle();
             a.Show();
         }
     }
