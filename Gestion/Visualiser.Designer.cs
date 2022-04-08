@@ -37,14 +37,17 @@ namespace Gestion
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroGrid1
             // 
+            this.metroGrid1.AllowUserToOrderColumns = true;
             this.metroGrid1.AllowUserToResizeRows = false;
             this.metroGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.metroGrid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -66,7 +69,7 @@ namespace Gestion
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.metroGrid1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -175,11 +178,24 @@ namespace Gestion
             this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.metroTextBox2.TextChanged += new System.EventHandler(this.metroTextBox2_TextChanged);
             // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(669, 82);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(84, 39);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTile1.TabIndex = 5;
+            this.metroTile1.Text = "Supprimer";
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
+            // 
             // Visualiser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.pictureBox1);
@@ -195,11 +211,11 @@ namespace Gestion
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        public MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroTile metroTile1;
     }
 }

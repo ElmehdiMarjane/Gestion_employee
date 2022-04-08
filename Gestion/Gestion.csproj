@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>hand_document_list_paper_file_icon_219510 %281%29.ico</ApplicationIcon>
+    <ApplicationIcon>image1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>2AA88425D221E9AED6B082018374BB841551272D</ManifestCertificateThumbprint>
@@ -168,6 +168,7 @@
     </EmbeddedResource>
     <None Include="Gestion_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Checkin.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -189,6 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hand_document_list_paper_file_icon_219510 %281%29.ico" />
+    <Content Include="image1.ico" />
     <None Include="Resources\kisspng-car-computer-icons-sedan-auto-detailing-auto-vector-5adb8f31845cb4.3836226215243384815422-removebg-preview.png" />
     <None Include="Resources\operations-management-computer-icons-business-administration-vector-graphics-png-favpng-XffEHGee3TEMQBTVVPdpkfBan-removebg-preview.png" />
     <None Include="Resources\image1.png" />
