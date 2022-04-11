@@ -64,7 +64,7 @@ namespace Gestion
             this.metroTile2.Size = new System.Drawing.Size(220, 116);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Red;
             this.metroTile2.TabIndex = 2;
-            this.metroTile2.Text = "Client";
+            this.metroTile2.Text = "Client depot port";
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
